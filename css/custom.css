@@ -96,3 +96,16 @@ ul.list-unstyled > li > a:hover {
 .sidebar-nav > li > a > i{
 	color: #1AAB4F;
 }
+
+
+/* Add hover animation to social icons */
+
+#contact ul.list-inline > li > a{
+     transition: font-size 0.35s ease;
+}
+
+#contact ul.list-inline > li > a:hover{
+    font-size: 4em;
+}
+
+
