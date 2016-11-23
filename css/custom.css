@@ -72,7 +72,8 @@ Modifications to Stylish theme
     #337AB7;
 }
 
-ul.list-unstyled > li > a {
+ul.list-unstyled > li > a,
+ul.list-unstyled > li > a > i {
     color: #FFF;
 }
 
