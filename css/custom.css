@@ -75,8 +75,7 @@ Modifications to Stylish theme
 }
 
 .sidebar-nav > li > a > i,
-.text-green,
-.list-inline > li > a > i{
+.text-green{
 	color: #1AAB4F
 }
 
