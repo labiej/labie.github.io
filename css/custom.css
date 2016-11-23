@@ -73,7 +73,8 @@ Modifications to Stylish theme
 }
 
 ul.list-unstyled > li > a,
-ul.list-unstyled > li > a > i {
+#contact ul.list-inline > li > a
+{
     color: #FFF;
 }
 
