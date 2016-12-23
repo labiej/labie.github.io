@@ -1,0 +1,36 @@
+html, body {
+  height: 100%;
+  min-height: 18em;
+  overflow: hidden;
+}
+
+#front-end{
+  float: left;
+  min-height: 100vh;
+  background: -webkit-linear-gradient(top left,
+      rgba(171, 71, 188, 0.25),
+      rgba(171, 71, 188, 0.9)
+    ), url('../images/frontend.png');
+  background: linear-gradient(to bottom right,
+      rgba(171, 71, 188, 0.25),
+      rgba(171, 71, 188, 0.9)
+    ), url('../images/frontend.png');
+  background-size:cover;
+}
+
+#back-end{
+  float: right;
+  min-height: 100vh;
+  background: -webkit-linear-gradient(top right,
+    rgba(84, 110, 122, 0.25),
+    rgba(84, 110, 122, 0.9)
+    ), url('../images/frontend.png');
+  background: linear-gradient(to bottom left,
+    rgba(84, 110, 122, 0.25),
+    rgba(84, 110, 122, 0.9)
+    ), url('../images/frontend.png');
+}
+
+h1{
+  text-shadow: 3px 3px 1px rgba(255, 255, 255, 0.4);
+}

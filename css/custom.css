@@ -1,11 +1,20 @@
 /*!
 Modifications to Stylish theme
-
 */
+
+::-moz-selection{
+	background: rgba(51,122,183,0.75);
+	color: #FFF;
+}
 
 ::selection{
 	background: rgba(51,122,183,0.75);
 	color: #FFF;
+}
+
+.bg-primary *::-moz-selection{
+	background: rgba(255,255,255,0.75);
+	color: rgb(51,122,183);
 }
 
 .bg-primary *::selection{
@@ -30,11 +39,13 @@ Modifications to Stylish theme
 	border: 0;
 	height: 1px;
 	margin-top: 30px;
+    	 background-image: -webkit-linear-gradient(left, rgba(51, 122, 183, 0.5), rgba(51, 122, 183, 1), rgba(51, 122, 183, 0.5));
     	 background-image: linear-gradient(to right, rgba(51, 122, 183, 0.5), rgba(51, 122, 183, 1), rgba(51, 122, 183, 0.5));
 }
 /* Animations */
 
 .collapsing {
+	-webkit-transition: height 0.6s;
 	transition: height 0.6s;
 }
 
@@ -42,11 +53,9 @@ Modifications to Stylish theme
 
 .header{
 	background: url(../img/DeathtoStock_Wired7.jpg) no-repeat center center scroll;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
-	
+
 }
 
 .img-border{
@@ -101,6 +110,7 @@ ul.list-unstyled > li > a:hover {
 /* Add hover animation to social icons */
 
 #contact ul.list-inline > li > a{
+     -webkit-transition: font-size 0.35s ease;
      transition: font-size 0.35s ease;
 }
 
