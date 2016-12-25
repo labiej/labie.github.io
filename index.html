@@ -2,23 +2,29 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CV Joris Labie</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.css">
   <link rel="stylesheet" href="styles/style.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="./materialize.js"></script>
 </head>
 <body>
-  <article class="row">
-    <section class="col s12 m6 valign-wrapper" id="front-end">
-      <div class="col s12 valign center-align">
-        <h1 class="white-text">Front-end</h1>
-        <a class="waves-effect waves-light btn-large">Take me there</a>
-      </div>
-    </section>
-    <section id="back-end" class="col s12 m6 valign-wrapper blue-grey darken-1">
-      <div class="col s12 valign center-align">
-        <h1 class="white-text">Back-end</h1>
-        <a class="waves-effect waves-light btn-large">Take me there</a>
-      </div>
-    </section>
+  <div id="container">
+    <article class="row">
+      <section id="front-end" class="col s12 m6 l6 valign-wrapper center-align">
+        <div class="valign">
+          <h1 class="blue-grey-text">Front-end</h1>
+          <a class="waves-effect waves-light btn-large purple darken-3 button" href="#"><i class="fa fa-telegram"></i><span class="btn-text">Take me there</span></a>
+        </div>
+      </section>
+      <section id="back-end" class="col s12 m6 l6 valign-wrapper center-align">
+        <div class="valign">
+          <h1 class="blue-grey-text">Back-end</h1>
+          <a class="waves-effect waves-ripple btn-large purple darken-3 button" href="#"><i class="fa fa-terminal"></i><span class="btn-text">Take me there</span></a>
+        </div>
+      </section>
+    </div>
   </body>
   </html>
