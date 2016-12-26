@@ -5,8 +5,6 @@
 
 html, body {
     font-size: 14pt;
-    padding-bottom: -20px!important;
-    margin-bottom: -20px!important;
 }
 
 @media only screen and (max-width: 600px){
@@ -14,6 +12,14 @@ html, body {
       font-size: 8pt;
   }
 }
+
+/* Remove margin from article.row */
+
+article.row{
+  margin-bottom: 0;
+}
+
+/* Style panes */
 
 #front-end{
     min-height: 100vh;
@@ -68,12 +74,14 @@ h1{
   font-family: 'Droid serif', serif;
 }
 
+/* Add spacing between icon and text */
 section[id] i{
   margin-right: 15px
 }
 
+/* Center content horizontally */
 section[id] div{
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 /* FONT AWESOME TWEAK */
