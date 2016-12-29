@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Courgette|Droid+Serif|Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Courgette|Droid+Serif');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /* Structure */
@@ -74,7 +74,7 @@ h1{
 
 
 #front-end h1{
-  font-family: 'Courgette','Lobster Two', serif;
+  font-family: 'Courgette', serif;
 }
 
 #back-end h1{
