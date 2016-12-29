@@ -5,11 +5,18 @@
 
 html, body {
     font-size: 14pt;
+    background-color: #282C34;
 }
 
 @media only screen and (max-width: 600px){
   html{
       font-size: 8pt;
+  }
+}
+
+@media only screen and (max-width: 990px){
+  html{
+      font-size: 10pt;
   }
 }
 
@@ -31,7 +38,7 @@ article.row{
     rgba(171, 71, 188, 0.5),
     rgba(171, 71, 188, 0.9)
     ), url('../images/frontend.png');
-    background-size: auto 100%;
+    background-size: cover;
 }
 
 #back-end{
@@ -44,7 +51,7 @@ article.row{
     rgba(84, 110, 122, 0.25),
     rgba(84, 110, 122, 0.9)
     ), url('../images/frontend.png');
-    background-size: auto 100%;
+    background-size: cover;
 }
 
 /* TYPOGRAPHY */
