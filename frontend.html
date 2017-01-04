@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/progress.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/progress.css">
 
 
 
@@ -419,26 +419,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.js"></script>
 
 <script type="text/javascript">
-/* EXTEND jquery */
 
-$.fn.isOnScreen = function(){
-
-  var win = $(window);
-
-  var viewport = {
-    top : win.scrollTop(),
-    left : win.scrollLeft()
-  };
-  viewport.right = viewport.left + win.width();
-  viewport.bottom = viewport.top + win.height();
-
-  var bounds = this.offset();
-  bounds.right = bounds.left + this.outerWidth();
-  bounds.bottom = bounds.top + this.outerHeight();
-
-  return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-
-}
 
 /* Set length of arc in svg */
 
