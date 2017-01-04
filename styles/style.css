@@ -156,11 +156,11 @@ section.row:nth-of-type(2n+1){
 /* Styling LINKS */
 
 a {
-  color: #00c853
+  color: #1b5e20
 }
 
 a:hover{
-  color: #1b5e20;
+  color: #08D;
 }
 
 a[target] {
