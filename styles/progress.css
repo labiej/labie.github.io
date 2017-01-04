@@ -1,0 +1,68 @@
+svg circle {
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset 1.25s linear;
+  transition: stroke-dashoffset 1.25s linear;
+  fill: transparent;
+  stroke-width: 1.2rem;
+}
+svg text{
+  fill: #01579b;
+  dominant-baseline: middle;
+  font-weight: 500;
+}
+
+/* PROGRESS COLOURS */
+
+svg .bar {
+  stroke: #01579b;
+  fill: transparent
+}
+
+.col:nth-of-type(3n+1) svg .bar{
+  stroke: #1b5e20;
+}
+
+.col:nth-of-type(3n+2) svg .bar{
+  stroke: #b71c1c;
+}
+
+.col:nth-of-type(3n) svg .bar{
+  stroke: #01579b;
+}
+
+.col:nth-of-type(3n+1) svg text{
+  fill: #1b5e20;
+}
+
+.col:nth-of-type(3n+2) svg text{
+  fill: #b71c1c;
+}
+
+.col:nth-of-type(3n) svg text{
+  fill: #01579b;
+}
+
+
+.progress {
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: 1rem auto;
+  border-radius: 100%;
+  position: relative;
+  background: transparent
+}
+
+/* ROTATE AND FLIP METERS */
+
+svg {
+  -webkit-transform: rotate(90deg) scale( -0.75, 0.75 ) ;
+  transform: rotate(90deg) scale( -0.75, 0.75 ) ;
+}
+
+
+svg:after{
+  content: ".";
+  visibility: hidden;
+  clear:both;
+}

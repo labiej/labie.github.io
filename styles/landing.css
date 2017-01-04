@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Droid+serif');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Structure */
+
+html, body {
+    font-size: 14pt;
+    background-color: #282C34;
+}
+
+@media only screen and (max-width: 600px){
+  html{
+      font-size: 8pt;
+  }
+}
+
+@media only screen and (max-width: 990px){
+  html{
+      font-size: 10pt;
+  }
+}
+
+/* Remove margin from article.row */
+
+article.row{
+  margin-bottom: 0;
+}
+
+/* Style panes */
+
+#front-end{
+    min-height: 100vh;
+    background: -webkit-linear-gradient(top left,
+    rgba(171, 71, 188, 0.5),
+    rgba(171, 71, 188, 0.9)
+    ), url('../images/frontend.png');
+    background: linear-gradient(to bottom right,
+    rgba(171, 71, 188, 0.5),
+    rgba(171, 71, 188, 0.9)
+    ), url('../images/frontend.png');
+    background-size: cover;
+}
+
+#back-end{
+    min-height: 100vh;
+    background: -webkit-linear-gradient(top right,
+    rgba(84, 110, 122, 0.25),
+    rgba(84, 110, 122, 0.9)
+    ), url('../images/frontend.png');
+    background: linear-gradient(to bottom left,
+    rgba(84, 110, 122, 0.25),
+    rgba(84, 110, 122, 0.9)
+    ), url('../images/frontend.png');
+    background-size: cover;
+}
+
+/* TYPOGRAPHY */
+
+h1{
+    font-size: 5rem;
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #858585,
+    0 3px 0 #777,
+    0 4px 0 #757575,
+    0 5px 0 #333,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+
+#front-end h1{
+  font-family: 'Courgette', serif;
+}
+
+#back-end h1{
+  font-family: 'Droid serif', sans-serif;
+}
+
+/* Add spacing between icon and text */
+section[id] i{
+  margin-right: 15px
+}
+
+/* Center content horizontally */
+section[id] div{
+  margin: 0 auto;
+}
+
+/* FONT AWESOME TWEAK */
+
+.fa{
+  vertical-align: middle!important;
+}
+
+/* TRANSITION ON HOVER */
+.fa, .btn-text{
+  -webkit-transition: color 1000ms ease;
+  transition: color 1000ms ease;
+}
+
+section[id] a.button:hover{
+  color: #ea80fc
+}
