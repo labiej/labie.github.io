@@ -7,7 +7,7 @@ var MyCanvas = ( function( context ){
 
   ctx.translate( 0.5*ctxWidth, 0.5*ctxHeight);
 
-  var flipY = 1;
+  var flipY = -1;
 
   var defaultStyles = {
     stroke: "#000",
@@ -49,12 +49,12 @@ var MyCanvas = ( function( context ){
   var setStyling = function( styles  ){
 
     if( typeof styles === 'undefined' )
-      return;
+    return;
 
     var styleNames = Object.getOwnPropertyNames(styles);
 
     styleNames = styleNames.filter( function(el){
-        return (accepted.indexOf(el) > -1);
+      return (accepted.indexOf(el) > -1);
     });
 
     styleNames.forEach( (name) => setProp(styleProperties[name], styles[name]) );
@@ -63,18 +63,18 @@ var MyCanvas = ( function( context ){
 
   /* Restore styling to default */
   var clearStyling = function( ){
-      ctx.restore();
+    ctx.restore();
   };
 
   /* Flip Y-direction */
   var setYdirection = function ( flip ){
     if( flip >= 1 ){
-        flipY = -1;
-        console.log(flipY);
+      flipY = -1;
+      console.log(flipY);
     }else if( flip < 1){
-        flipY = 1;
-        console.log(flipY);
-      }
+      flipY = 1;
+      console.log(flipY);
+    }
   };
 
   /* Simple functions */
@@ -90,6 +90,22 @@ var MyCanvas = ( function( context ){
     clearStyling();
   };
 
+  var drawArrow = function(fromx, fromy, tox, toy, styles){
+
+    setStyling( styles );
+
+    var headlen = 10;   // length of head in pixels
+    var angle = Math.atan2(flipY*(toy-fromy),tox-fromx);
+    ctx.moveTo(fromx, flipY*fromy);
+    ctx.lineTo(tox, flipY*toy);
+    ctx.lineTo(tox-headlen*Math.cos(angle-Math.PI/6),flipY*toy-headlen*Math.sin(angle-Math.PI/6));
+    ctx.moveTo(tox, flipY*toy);
+    ctx.lineTo(tox-headlen*Math.cos(angle+Math.PI/6),flipY*toy-headlen*Math.sin(angle+Math.PI/6));
+
+    ctx.stroke();
+
+    clearStyling();
+  };
   /* Draw a circle */
   var drawCircle = function ( cx, cy, r, styles){
 
@@ -108,8 +124,8 @@ var MyCanvas = ( function( context ){
   var drawAxes = function ( styles ){
     styles = styles || {stroke: defaultStyles.axes};
 
-    drawLine( 0, -0.5*ctxHeight, 0, 0.5*ctxHeight, styles);
-    drawLine( -0.5*ctxWidth, 0, 0.5*ctxWidth, 0, styles);
+    drawArrow( 0, -0.5*ctxHeight, 0, 0.5*ctxHeight, styles);
+    drawArrow( -0.5*ctxWidth, 0, 0.5*ctxWidth, 0, styles);
   };
 
   return {
@@ -119,3 +135,4 @@ var MyCanvas = ( function( context ){
   };
 
 })(document.getElementById("draw").getContext("2d"));
+
