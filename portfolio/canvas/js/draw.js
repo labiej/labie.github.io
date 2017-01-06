@@ -1,5 +1,3 @@
-MyCanvas.flipY( 1 );
-
 MyCanvas.drawAxes();
 MyCanvas.drawCircle( 0, 0, 15, { fill: "#F0F" });
 MyCanvas.drawCircle( 0, 0, 30);
