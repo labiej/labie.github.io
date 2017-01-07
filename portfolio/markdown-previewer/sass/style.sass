@@ -21,11 +21,13 @@ h1, h2, h3
 @media (max-width: 800px)
   #container
     flex-direction: column
- 
+
 
 @media (min-width: 800px)
   #container
     flex-direction: row
+  #left, #right
+    display: block;
 
 #left, #right, #input
   flex: 1
@@ -73,29 +75,29 @@ h1, h2, h3
   order: 2
   padding: 0
 
-  
+
 @media (max-width: 800px)
   #left
     margin: 0
   #right
     display: none
-    
+
 #preview
   background: #FFF
-  
+
 #title label
   display: none
   margin-bottom: 0.5rem
   background-color: $primary-color
   color: #FFF
   font-weight: 500
-  
+
 @media (max-width: 800px)
   #title label
     display: block
   #left h2.titles, #right h2.titles
     display: none
-  
+
 #title h1
   display: block
   font-size: 3em
