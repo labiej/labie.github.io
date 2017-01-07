@@ -21,11 +21,25 @@
   <p>
     The first difference is that the origin is positioned in the center of the canvas. The positive y-direction is upwards.
   </p>
+  <h4>Settings</h4>
+  <p>
+    Some settings like the positive y-direction can be changed. The default direction is upwards, it can be flipped to the standard canvas convention using.
+    <dl>
+      <dt>MyCanvas.flipY( flip )</dt>
+      <dd>The argument must be of type <i>boolean</i>, if it is not boolean the function returns a <i>falsy</i> value. If it returns <i>undefined</i> you're playing a dangerous game since in that case you created a boolean with a value other than <i>true/false</i>. A succesful execution returns <i>true</i>. If the argument is true, the positive y-direction will be upwards. The default canvas direction requires a false argument.
+      </dd>
+    </dl>
   <h4>Current functionality</h4>
   <p>
     <dl>
+      <dt>MyCanvas.drawLine( fromx, fromy, tox, toy, <i>[style</i> )</dt>
+      <dd>Draw a line starting at <pre>(fromx, fromy)</pre> to <pre>(tox, toy)</pre></dd>
+      <dt>MyCanvas.drawArrow( fromx, fromy, tox, toy, <i>[style</i> )</dt>
+      <dd>Draw an arrow starting at <pre>(fromx, fromy)</pre> to <pre>(tox, toy)</pre>.</dd>
       <dt>MyCanvas.drawAxes( <i>[style</i> )</dt>
-      <dd>Draw the axes in such a way that they identify the coordinate system</dd>
+      <dd>Draw the axes in such a way that they identify the coordinate system, uses <i>drawAxes</i> internally.</dd>
+      <dt>MyCanvas.drawCircle( cx, cy, r, <i>[style</i> )</dt>
+      <dd>Draw a circle of radius <i>r</i> centered at <pre>(cx, cy)</pre></dd>
     </dl>
   </p>
 </article>

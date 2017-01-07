@@ -68,13 +68,18 @@ var MyCanvas = ( function( context ){
 
   /* Flip Y-direction */
   var setYdirection = function ( flip ){
-    if( flip >= 1 ){
+    if( typeof flip !== 'boolean')
+      return false;
+
+    if( flip ){
       flipY = -1;
-      console.log(flipY);
-    }else if( flip < 1){
+    }else if( !flip ){
       flipY = 1;
-      console.log(flipY);
+    }else{
+      return undefined;
     }
+
+    <
   };
 
   /* Simple functions */
@@ -129,10 +134,11 @@ var MyCanvas = ( function( context ){
   };
 
   return {
-    drawCircle: drawCircle,
     drawAxes: drawAxes,
-    'flipY': setYdirection
+    drawLine: drawLine,
+    drawArrow: drawArrow,
+    drawCircle: drawCircle,
+    'flipY': setYdirection,
   };
 
 })(document.getElementById("draw").getContext("2d"));
-
