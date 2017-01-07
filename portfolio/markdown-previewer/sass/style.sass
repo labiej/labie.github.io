@@ -1,0 +1,125 @@
+@import "https://fonts.googleapis.com/css?family=Raleway|Roboto:100"
+
+$primary-color: #546e7a
+$markdown-lines: #ff3d00
+html *
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  background: #CCCCCC
+  font-family: 'Raleway', sans-serif
+
+h1, h2, h3
+  font-family: 'Roboto', sans-serif
+
+#container
+  display: flex
+  max-width: 100%
+
+@media (max-width: 800px)
+  #container
+    flex-direction: column
+ 
+
+@media (min-width: 800px)
+  #container
+    flex-direction: row
+
+#left, #right, #input
+  flex: 1
+  min-height: 100px
+  box-shadow-bottom: 1px 3px 15px #2b8836
+  background: $primary-color
+
+#left h2.titles, #right h2.titles, #input h2.titles
+  text-align: center
+  font-size: 1rem
+  padding: 1rem
+  display: block
+  color: #FFF
+  font-weight: bold
+  background: $primary-color
+
+#left textarea, #right textarea, #input textarea
+  line-height: 1.5
+  font-size: 16px
+  margin: 0
+  width: 100%
+  padding: 10px
+  border: none
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  resize: vertical
+
+#left textarea:focus, #right textarea:focus, #input textarea:focus
+  border: none
+  outline: none
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+
+#left
+  background: #FFF
+  text-align: center
+  order: 1
+  padding: 0
+  margin-right: 0.5rem
+
+#right
+  background: #FFF
+  order: 2
+  padding: 0
+
+  
+@media (max-width: 800px)
+  #left
+    margin: 0
+  #right
+    display: none
+    
+#preview
+  background: #FFF
+  
+#title label
+  display: none
+  margin-bottom: 0.5rem
+  background-color: $primary-color
+  color: #FFF
+  font-weight: 500
+  
+@media (max-width: 800px)
+  #title label
+    display: block
+  #left h2.titles, #right h2.titles
+    display: none
+  
+#title h1
+  display: block
+  font-size: 3em
+  font-size: 1.25rem
+  padding: 0.5em
+  text-align: center
+  background: $primary-color
+  color: #FFF
+  margin-bottom: 0.5rem
+
+#preview
+  padding: 1em
+
+.markdown-body
+  margin: 0 auto
+  padding: 45px
+  font-family: 'Raleway'
+
+  hr
+    background-color: $markdown-lines
+
+  h1, h2
+    border-color: $markdown-lines
+
+  pre code
+    white-space: pre-wrap
+    word-wrap: break-word
