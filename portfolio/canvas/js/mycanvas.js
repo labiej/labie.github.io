@@ -78,8 +78,6 @@ var MyCanvas = ( function( context ){
     }else{
       return undefined;
     }
-
-    <
   };
 
   /* Simple functions */
@@ -141,4 +139,4 @@ var MyCanvas = ( function( context ){
     'flipY': setYdirection,
   };
 
-})(document.getElementById("draw").getContext("2d"));
+});

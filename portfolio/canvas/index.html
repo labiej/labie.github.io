@@ -4,48 +4,86 @@
   <meta charset="UTF-8">
   <title>Fun with canvas</title>
 
-  <link rel="stylesheet" href="css/style.css">
-
-
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/desert.css">
 
 </head>
 
 <body>
   <canvas id="draw"></canvas>
 
-<header>
-  <h1>Explanation</h1>
-</header>
-<article>
-  <h3>A simple library for higher order canvas functionality.</h3>
-  <p>
-    The first difference is that the origin is positioned in the center of the canvas. The positive y-direction is upwards.
-  </p>
-  <h4>Settings</h4>
-  <p>
-    Some settings like the positive y-direction can be changed. The default direction is upwards, it can be flipped to the standard canvas convention using.
-    <dl>
-      <dt>MyCanvas.flipY( flip )</dt>
-      <dd>The argument must be of type <i>boolean</i>, if it is not boolean the function returns a <i>falsy</i> value. If it returns <i>undefined</i> you're playing a dangerous game since in that case you created a boolean with a value other than <i>true/false</i>. A succesful execution returns <i>true</i>. If the argument is true, the positive y-direction will be upwards. The default canvas direction requires a false argument.
-      </dd>
-    </dl>
-  <h4>Current functionality</h4>
-  <p>
-    <dl>
-      <dt>MyCanvas.drawLine( fromx, fromy, tox, toy, <i>[style</i> )</dt>
-      <dd>Draw a line starting at <pre>(fromx, fromy)</pre> to <pre>(tox, toy)</pre></dd>
-      <dt>MyCanvas.drawArrow( fromx, fromy, tox, toy, <i>[style</i> )</dt>
-      <dd>Draw an arrow starting at <pre>(fromx, fromy)</pre> to <pre>(tox, toy)</pre>.</dd>
-      <dt>MyCanvas.drawAxes( <i>[style</i> )</dt>
-      <dd>Draw the axes in such a way that they identify the coordinate system, uses <i>drawAxes</i> internally.</dd>
-      <dt>MyCanvas.drawCircle( cx, cy, r, <i>[style</i> )</dt>
-      <dd>Draw a circle of radius <i>r</i> centered at <pre>(cx, cy)</pre></dd>
-    </dl>
-  </p>
-</article>
+  <header>
+    <h1>Explanation</h1>
+  </header>
+  <article>
+    <h3>A simple library for higher order canvas functionality.</h3>
+    <p>
+      The first difference is that the origin is positioned in the center of the canvas. The positive y-direction is upwards.
+    </p>
+    <h4>Settings</h4>
+    <p>
+      Some settings like the positive y-direction can be changed. The default direction is upwards, it can be flipped to the standard canvas convention using.
+      <dl>
+        <dt><code class="prettyprint lang-javascript">MyCanvas.flipY( flip )</code></dt>
+        <dd>The argument must be of type <i>boolean</i>, if it is not boolean the function returns a <i>falsy</i> value. If it returns <i>undefined</i> you're playing a dangerous game since in that case you created a boolean with a value other than <i>true/false</i>. A succesful execution returns <i>true</i>. If the argument is true, the positive y-direction will be upwards. The default canvas direction requires a false argument.
+        </dd>
+      </dl>
+      <h4>Current functionality</h4>
+      <p>
+        <dl>
+          <dt><code class="prettyprint lang-javascript">MyCanvas.drawLine( fromx, fromy, tox, toy, <i>[style</i> )</code></dt>
+          <dd>Draw a line starting at <code>(fromx, fromy)</code> to <code>(tox, toy)</code></dd>
+          <dt><code class="prettyprint lang-javascript">MyCanvas.drawArrow( fromx, fromy, tox, toy, <i>[style</i> )</code></dt>
+          <dd>Draw an arrow starting at <code>(fromx, fromy)</code> to <code>(tox, toy)</code>.</dd>
+          <dt><code class="prettyprint lang-javascript">MyCanvas.drawAxes( <i>[style</i> )</code></dt>
+          <dd>Draw the axes in such a way that they identify the coordinate system, uses <i>drawAxes</i> internally.</dd>
+          <dt><code class="prettyprint lang-javascript">MyCanvas.drawCircle( cx, cy, r, <i>[style</i> )</code></dt>
+          <dd>Draw a circle of radius <i>r</i> centered at <code>(cx, cy)</code></dd>
+        </dl>
+      </p>
 
+      <h4>Styling objects</h4>
+      <p>
+        The <i>style</i> argument expects a javascript object of the form
+        <pre class="prettyprint lang-javascript">
+          {
+            fill: "fill color",
+            stroke: "stroke color",
+            width: "width of lines"
+          }
+        </pre>
+
+        At this point in time these are the only supported styling options, some options might be added later.
+      </p>
+
+      <h4>Todo list</h4>
+      <p>
+        Wrappers
+        <ul>
+          <li>Text</li>
+          <li>Rectangle</li>
+          <li>Curves</li>
+        </ul>
+
+        Functionality
+        <ul>
+          <li>Triangle</li>
+          <li>Polygons</li>
+          <li>Save as image</li>
+        </ul>
+    </article>
+
+    <!-- Canvas library -->
     <script src="js/mycanvas.js"></script>
     <script src="js/draw.js" charset="utf-8"></script>
 
+    <!-- Syntax highlighting -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=js" charset="utf-8"></script>
+    <!--
+    <script src="js/highlight.pack.js" charset="utf-8"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+-->
 </body>
 </html>

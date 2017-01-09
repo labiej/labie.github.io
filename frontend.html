@@ -10,23 +10,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/progress.css">
-
-
-
-
-  <style>
-  @media only screen and (min-width: 601px) {
-    .full-height{
-      min-height: calc(100vh - 64px);
-    }
-  }
-
-  .full-height{
-    min-height: 100vh;
-  }
-
-  </style>
-
 </head>
 <body>
   <div class="navbar-fixed z-depth-0">
@@ -415,44 +398,14 @@
 
 </footer>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.js"></script>
 
-<script type="text/javascript">
+<!-- Load inview plug-in for jquery -->
+<script src="js/inview.js" charset="utf-8"></script>
 
-
-/* Set length of arc in svg */
-
-function setProgress( $circle){
-  var val = $circle.parent().parent().attr('data-pct');
-  var r = $circle.attr('r');
-  var c = Math.PI*(r*2);
-  if (val < 0) { val = 0;}
-  if (val > 100) { val = 100;}
-
-  var pct = ((100-val)/100)*c;
-
-  $circle.css({ strokeDashoffset: pct});
-
-  $circle.parent().parent().attr('data-pct',val);
-}
-
-/* INITIALISE LISTENERS */
-$(document).ready(function(){
-  var i;
-
-  $('.scrollspy').scrollSpy();
-
-  $('.progress > .svg > .bar').each( function (i, el){
-    setProgress($(this));
-  });
-
-  /* Rotate logo once */
-  $('.svg-logo').addClass("rotator")
-
-
-});
-</script>
+<!-- Add event listeners to delay gauge animation -->
+<script src="js/main.js" charset="utf-8"></script>
 
 </body>
 </html>
