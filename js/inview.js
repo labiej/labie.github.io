@@ -3,6 +3,9 @@
  * ========================
  *  (requires jQuery)
  */
+
+// comment for the sake of comments
+
 (function ($) {
 
     var vph=0;
