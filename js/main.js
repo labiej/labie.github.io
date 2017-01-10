@@ -34,8 +34,8 @@ $(document).ready(function(){
   $('.scrollspy').scrollSpy();
 
   $('.progress > .svg > .bar').inViewport(
-		function(){ console.dir($(this)); setProgress( $(this) ) },
-		function() { console.dir($(this)); setProgress( $(this), true)}
+		function(){ setProgress( $(this) ) },
+		function() { setProgress( $(this), true) }
 	);
 
   /* Rotate logo once */
