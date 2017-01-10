@@ -20,6 +20,13 @@
     <p>
       The first difference is that the origin is positioned in the center of the canvas. The positive y-direction is upwards.
     </p>
+    <h4>Initialization</h4>
+    <p>
+      <dl>
+        <dt><code class="prettyprint lang-javascript">var canvas = new MyCanvas( context )</code></dt>
+        <dd>
+          The context argument is stored inside the object. Typically you'll use <pre class="prettyprint lang-javascript">context = document.getElementById("canvasID").getContext("2d")</pre>
+        </dd>
     <h4>Settings</h4>
     <p>
       Some settings like the positive y-direction can be changed. The default direction is upwards, it can be flipped to the standard canvas convention using.
@@ -39,51 +46,64 @@
           <dd>Draw the axes in such a way that they identify the coordinate system, uses <i>drawAxes</i> internally.</dd>
           <dt><code class="prettyprint lang-javascript">MyCanvas.drawCircle( cx, cy, r, <i>[style</i> )</code></dt>
           <dd>Draw a circle of radius <i>r</i> centered at <code>(cx, cy)</code></dd>
-        </dl>
-      </p>
+          <dt><code class="prettyprint lang-javascript">MyCanvas.drawPolygon( points, <i>[style</i> )</code></dt>
+          <dd>Draw a general polygon starting and ending at the point defined by <code class="prettyprint lang-javascript">points[ 0 ]</code>. Each point should be an object of the form,
+            <pre class="prettyprint lang-javascript">
+              {
+                x: Number,
+                y: Number
+              }
+            </pre>
+           </dd>
+          </dl>
+        </p>
 
-      <h4>Styling objects</h4>
-      <p>
-        The <i>style</i> argument expects a javascript object of the form
-        <pre class="prettyprint lang-javascript">
-          {
-            fill: "fill color",
-            stroke: "stroke color",
-            width: "width of lines"
-          }
-        </pre>
+        <h4>Styling objects</h4>
+        <p>
+          The <i>style</i> argument expects a javascript object of the form
+          <pre class="prettyprint lang-javascript">
+            {
+              fill: "fill color",
+              stroke: "stroke color",
+              width: "width of lines"
+            }
+          </pre>
 
-        At this point in time these are the only supported styling options, some options might be added later.
-      </p>
+          At this point in time these are the only supported styling options, some options might be added later.
+        </p>
 
-      <h4>Todo list</h4>
-      <p>
-        Wrappers
-        <ul>
-          <li>Text</li>
-          <li>Rectangle</li>
-          <li>Curves</li>
-        </ul>
+        <h4>Todo list</h4>
+        <p>
+          Bugs
+          <ul>
+            <li>Clear styling after drawing object <b>Resolved, ALWAYS use beginPath and clearPath</b></li>
+          </ul>
 
-        Functionality
-        <ul>
-          <li>Triangle</li>
-          <li>Polygons</li>
-          <li>Save as image</li>
-        </ul>
-    </article>
+          Wrappers
+          <ul>
+            <li>Text</li>
+            <li>Rectangle</li>
+            <li>Curves</li>
+          </ul>
 
-    <!-- Canvas library -->
-    <script src="js/mycanvas.js"></script>
-    <script src="js/draw.js" charset="utf-8"></script>
+          Functionality
+          <ul>
+            <li>Triangle ( by type and position )</li>
+            <li>Save as image</li>
+          </ul>
+        </article>
 
-    <!-- Syntax highlighting -->
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=js" charset="utf-8"></script>
-    <!--
-    <script src="js/highlight.pack.js" charset="utf-8"></script>
-    <script>
-    hljs.initHighlightingOnLoad();
-  </script>
--->
-</body>
-</html>
+        <!-- Canvas library -->
+        <script src="js/mycanvas.js"></script>
+        <script src="js/draw.js" charset="utf-8"></script>
+
+        <!-- Syntax highlighting -->
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=js" charset="utf-8"></script>
+        <!--
+        <script src="js/highlight.pack.js" charset="utf-8"></script>
+        <script>
+        hljs.initHighlightingOnLoad();
+      </script>
+    -->
+  </body>
+  </html>

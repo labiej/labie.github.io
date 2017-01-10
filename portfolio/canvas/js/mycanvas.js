@@ -13,14 +13,6 @@ var MyCanvas = ( function( context ){
     stroke: "#000",
     fill: "transparent",
     axes: "#666",
-    circle: {
-      stroke: "#F00",
-      fill: "transparent"
-    },
-    line: {
-      width: 1,
-      stroke: "#000"
-    }
   };
 
   var styleProperties ={
@@ -64,12 +56,14 @@ var MyCanvas = ( function( context ){
   /* Restore styling to default */
   var clearStyling = function( ){
     ctx.restore();
+    ctx.fillStyle = "transparent";
+    ctx.lineWidth = 1;
   };
 
   /* Flip Y-direction */
   var setYdirection = function ( flip ){
     if( typeof flip !== 'boolean')
-      return false;
+    return false;
 
     if( flip ){
       flipY = -1;
@@ -86,8 +80,14 @@ var MyCanvas = ( function( context ){
 
     setStyling( styles );
 
+    // Begin Drawing
+    ctx.beginPath();
     ctx.moveTo( x1, flipY*y1 );
     ctx.lineTo( x2, flipY*y2);
+    ctx.closePath();
+    // END Drawing
+
+    // Begin styling
     ctx.stroke();
 
     clearStyling();
@@ -99,12 +99,14 @@ var MyCanvas = ( function( context ){
 
     var headlen = 10;   // length of head in pixels
     var angle = Math.atan2(flipY*(toy-fromy),tox-fromx);
+
+    ctx.beginPath();
     ctx.moveTo(fromx, flipY*fromy);
     ctx.lineTo(tox, flipY*toy);
     ctx.lineTo(tox-headlen*Math.cos(angle-Math.PI/6),flipY*toy-headlen*Math.sin(angle-Math.PI/6));
     ctx.moveTo(tox, flipY*toy);
     ctx.lineTo(tox-headlen*Math.cos(angle+Math.PI/6),flipY*toy-headlen*Math.sin(angle+Math.PI/6));
-
+    ctx.closePath();
     ctx.stroke();
 
     clearStyling();
@@ -118,7 +120,7 @@ var MyCanvas = ( function( context ){
     ctx.arc(cx,flipY*cy,r,0,2*Math.PI);
     ctx.stroke();
     ctx.fill();
-
+    ctx.closePath();
     clearStyling();
   };
 
@@ -131,11 +133,64 @@ var MyCanvas = ( function( context ){
     drawArrow( -0.5*ctxWidth, 0, 0.5*ctxWidth, 0, styles);
   };
 
+  var drawPolygon = function ( points, styles ){
+    if ( points.constructor !== Array ){
+      console.log( 'Array error' );
+      return null;
+    }
+    setStyling( styles );
+
+    // Get first point (also the last)
+    var first = points.shift();
+    if ( first.constructor !== Object ){
+      console.log( "First object error");
+      return null;
+    }
+    var i = 1;
+    ctx.beginPath();
+    ctx.moveTo( first.x, flipY*first.y );
+
+    for ( i = 0; i < points.length; i++ ){
+      var point = points[ i ];
+      if ( point.constructor !== Object ){
+        console.log( "loop object error in " + i + "th iteration" );
+        i++;
+        console.dir( point );
+        return null;
+      }
+
+
+      ctx.lineTo( point.x, flipY*point.y );
+    }
+
+    ctx.lineTo( first.x, flipY*first.y );
+    ctx.closePath();
+
+    ctx.stroke();
+    ctx.fill();
+
+    clearStyling();
+  };
+
+  var drawRectangle = function( fromx, fromy, tox, toy, styles ){
+    if ( isNaN(fromx) || isNaN(fromy) || isNaN(tox) || isNaN(toy) ){
+      console.error( "At least one argument is not a number!" );
+      return null;
+    }
+
+    var width = abs( fromx - tox );
+    var height = abs( fromy - toy );
+
+    
+
+  };
+
   return {
     drawAxes: drawAxes,
     drawLine: drawLine,
     drawArrow: drawArrow,
     drawCircle: drawCircle,
+    drawPolygon: drawPolygon,
     'flipY': setYdirection,
   };
 
