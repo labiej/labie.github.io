@@ -55,7 +55,7 @@ svg .bar {
 
 /* ROTATE AND FLIP METERS */
 
-svg {
+.progress svg {
   -webkit-transform: rotate(90deg) scale( -0.75, 0.75 ) ;
   transform: rotate(90deg) scale( -0.75, 0.75 ) ;
 }
