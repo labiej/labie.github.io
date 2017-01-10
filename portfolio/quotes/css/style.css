@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai');
+
+* {
+	/* Minimal reset, border-box is a must */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	/* Set default, control responsive size using rem units */
+	font-size: 16px;
+}
+
+body {
+	width: 60%;
+	background: #263238;
+	margin: 0 auto;
+
+	/* Display flex with prefixes */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	/* The direction has changed a lot over time */
+		 -webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		 -ms-flex-direction: column;
+		 		 flex-direction: column;
+
+	/* Alignment not so much */
+			-webkit-box-align: center;
+				 -ms-flex-align: center;
+				 		align-items: center;
+
+}
+
+/* GLOBAL RESPONSIVENESS */
+
+/* Mobile  portrait*/
+@media only screen and (max-width: 450px)  {
+	html {
+		font-size: 11px;
+	}
+
+	body {
+		width: 90%;
+	}
+}
+
+/* Mobile landscape */
+
+@media only screen and (min-width: 451px) and (max-width: 600px)  {
+	html {
+		font-size: 13px;
+	}
+
+	body {
+		width: 90%;
+	}
+}
+
+/* Tablet portrait */
+
+@media only screen and (min-width: 601px) and (max-width: 800px)  {
+	html {
+		font-size: 14px;
+	}
+
+	body {
+		width: 90%;
+	}
+}
+
+/* Tablet landscape */
+
+@media only screen and (min-width: 801px) and (max-width: 1100px)  {
+	body {
+		width: 75%;
+	}
+}
+
+/* MAIN ELEMENTS */
+
+
+header {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 1em
+}
+
+article {
+	width: 100%
+}
+
+article > section {
+	margin-bottom: 2rem;
+	width: 100%
+}
+
+article > section.controls{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: 100%
+}
+
+/* ALIGNMENT OF BUTTONS ON SMALLER SCREENS */
+
+@media only screen and (min-width: 900px) {
+	article > section.controls{
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+	}
+}
+
+article > section.controls button,
+article > section.controls a {
+	min-width: 25%;
+	padding: 1.5rem
+}
+
+header > h1 {
+	font-family: 'Arima Madurai', Monospace;
+	color: #00c853;
+	font-size: 3rem;
+	font-weight: bold;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+	text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.75);
+}
+
+/* Use for buttons AND attribution */
+.fancy-font {
+	font-family: 'Arima Madurai', Monospace;
+	font-size: 2rem;
+}
+
+h2.fancy-font {
+	font-weight: bold;
+	text-align: right;
+}
+
+.quote-text {
+	font-family: 'Arima Madurai', Georgia, "Times New Roman", Times, serif;
+	font-size: 2rem;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 1rem
+}
+
+.white-bg {
+	color: #1b5e20;
+	background-color: white;
+	border-radius: 30px;
+	padding: 15px 25px;
+	max-height: 500px;
+
+	-webkit-transition: max-height 5s ease;
+					transition: max-height 5s ease
+}
+
+button {
+	border: none;
+	background: #00c853;
+	color: #FFF;
+	-webkit-box-shadow: 0 2px 2px 0 rgba(255,255,255,0.14),
+											0 1px 5px 0 rgba(255,255,255,0.12),
+											0 3px 1px -2px rgba(255,255,255,0.2);
+	-moz-box-shadow: 0 2px 2px 0 rgba(255,255,255,0.14),
+									 0 1px 5px 0 rgba(255,255,255,0.12),
+									 0 3px 1px -2px rgba(255,255,255,0.2);
+	box-shadow: 0 2px 2px 0 rgba(255,255,255,0.14),
+							0 1px 5px 0 rgba(255,255,255,0.12),
+							0 3px 1px -2px rgba(255,255,255,0.2);
+}
+
+button:hover{
+	cursor: pointer;
+	background: #b9f6ca;
+	color: #1b5e20
+}
+
+
+a.send-tweet {
+	color: #1976d2;
+	text-decoration: none;
+}
+
+a.send-tweet img {
+	height: 2rem;
+	vertical-align: middle;
+	margin-right: 0.5rem
+}
+
+
