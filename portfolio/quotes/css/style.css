@@ -195,10 +195,23 @@ a.send-tweet {
 	text-decoration: none;
 }
 
-a.send-tweet img {
+a.send-tweet svg {
 	height: 2rem;
 	vertical-align: middle;
-	margin-right: 0.5rem
+	margin-right: 0.5rem;
 }
+
+a.send-tweet svg path {
+	fill: #1976d2;
+}
+
+button:hover a {
+	color: #0d47a1;
+}
+
+button:hover svg path {
+	fill: #1a237e;
+}
+
 
 
