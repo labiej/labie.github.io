@@ -4,3 +4,6 @@ README.boot
 
 old/
 old/*
+
+images/*
+!images/*_thumbnail.png
