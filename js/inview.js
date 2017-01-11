@@ -62,7 +62,7 @@ throttle = function(func, wait, options) {
                 inviewalreadycalled = false,
                 notinviewalreadycalled = false;
             //on resize/scroll
-						var throttledCheck = throttle( checkInView, 1000 );
+						var throttledCheck = throttle( checkInView, 500 );
             $(window).on('resize orientationChanged scroll', throttledCheck);
             function checkInView(){
                 var rect = el[0].getBoundingClientRect(),
