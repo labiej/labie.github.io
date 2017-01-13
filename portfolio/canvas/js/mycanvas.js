@@ -1,7 +1,13 @@
 /* jshint esversion: 6 */
 
-var MyCanvas = ( function( context ){
-  var ctx = context;
+var MyCanvas = ( function( canvas, noscale = false ){
+
+	if ( !noscale ){
+		canvas.setAttribute( 'width', canvasElement.offsetWidth );
+		canvas.setAttribute( 'height', canvasElement.offsetHeight );
+	}
+
+  var ctx = canvas.getContext('2d');
   var ctxWidth = ctx.canvas.clientWidth;
   var ctxHeight = ctx.canvas.clientHeight;
 
@@ -181,7 +187,7 @@ var MyCanvas = ( function( context ){
     var width = abs( fromx - tox );
     var height = abs( fromy - toy );
 
-    
+
 
   };
 

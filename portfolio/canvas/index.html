@@ -23,9 +23,11 @@
     <h4>Initialization</h4>
     <p>
       <dl>
-        <dt><code class="prettyprint lang-javascript">var canvas = new MyCanvas( context )</code></dt>
+        <dt><code class="prettyprint lang-javascript">var canvas = new MyCanvas( canvas, <i>[ noScale ]</i> )</code></dt>
         <dd>
-          The context argument is stored inside the object. Typically you'll use <pre class="prettyprint lang-javascript">context = document.getElementById("canvasID").getContext("2d")</pre>
+          The context is stored inside the object using <code class="prettyprint lang-javascript">canvas.getContext('2d')</code>.
+					The reason for this is that CSS styling leads to distorted drawings. For that reason we set the width and height attributes inside the semantic canvasObject. If for some reason you don't want to set the attributes (which basically define your coordinates) you can pass a second argument <code class="prettyprint lang-javascript">noscale = true</code>. This will stop us from setting the (HTML!) attributes.
+					Typically you'll use <pre class="prettyprint lang-javascript">context = document.getElementById("canvasID")</pre>
         </dd>
     <h4>Settings</h4>
     <p>
