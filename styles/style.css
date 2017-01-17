@@ -155,6 +155,15 @@ section.row:nth-of-type(2n+1){
   background: #cfd8dc
 }
 
+h3.cta{
+	font-size: 3rem;
+	margin: 5rem auto;
+}
+h3.cta > a,
+h3.cta > a:hover {
+	background-size: 3rem 3rem;
+	padding-right: 4rem;
+}
 
 /* Styling LINKS */
 
@@ -258,4 +267,8 @@ abbr{
 	align-self: flex-start;
 	margin-left: 1rem;
 	font-weight: 700;
+}
+
+.portfolio > figcaption > p {
+	margin: 0 10px;
 }
