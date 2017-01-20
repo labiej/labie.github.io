@@ -1,0 +1,90 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700|Raleway';
+
+$headerFont:  'Alegreya Sans', sans-serif;
+$mainFont:    'Raleway', sans-serif;
+
+$bannerBackground:    #93D2FC;
+$bodyBackground:      #B1BFC9;
+
+$titleColour:         #48687C;
+$tabTitleColour:      #DEF0FC;
+
+
+// Customize blockqoute
+$quoteColour:         #6E777C;
+$blockquote-border: 1px solid $quoteColour;
+$blockquote-color:    $titleColour;
+
+
+
+* {
+  font-family: $mainFont
+}
+
+h1, h2, h3{
+  font-family: $headerFont;
+  font-weight: 700;
+   color: $titleColour
+}
+body{
+  background: $bodyBackground;
+}
+
+.bg-image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/56/HD.3A.053_(10481714045).jpg");
+  /* lt ie8 */
+  -ms-background-position-x: center;
+  -ms-background-position-y: bottom;
+  background-position: center bottom;
+  /* scale bg image proportionately */
+  background-size: cover;
+  /* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
+  -ms-behavior: url(https://cdn.css-tricks.com/backgroundsize.min.htc);
+  /* prevent scaling past src width (or not) */
+  /* max-width: 1200px; */
+}
+
+.subtitle {
+  background: $titleColour;
+}
+
+.accordion-title {
+  background: $titleColour;
+  
+  color: $tabTitleColour;
+  font-family: $headerFont;
+  font-weight: 500;
+}
+
+.accordion-title:focus, .accordion-title:hover {
+  outline: none;
+  color: $titleColour;
+  background: $tabTitleColour
+}
+
+.accordion-title::before,
+.accordion-title::after{
+  vertical-align: middle;
+}
+
+.desktop > .accordion-title::before,
+.is-active.desktop > .accordion-title::before {
+  content: '';
+}
+
+.callout .primary{
+  background: $bannerBackground;
+}
+
+.accordion-content p{
+  word-wrap: break-word;
+  font-size: 13pt
+}
+
+.accordion-content h1 small{
+  color: $titleColour
+}
+
+.linklist li{
+  padding: 0.25em
+}

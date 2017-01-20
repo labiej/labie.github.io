@@ -1,0 +1,31 @@
+/* STYLE ACCORDION TITLES/BUTTONS */
+
+article > section > button.accordion-title {
+	width: 100%;
+	text-align: center;
+	border: none;
+	margin: 0;
+}
+
+/* ACCORDION CONTENT */
+
+div.accordion-content {
+	display: none;
+	padding: 1rem;
+	transition: max-height 2s linear;
+	background: #FFF;
+}
+
+div.accordion-content::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+article > section > div.accordion-content.active {
+	display: block;
+}
+
+article > section > div.accordion-content > p {
+
+}
