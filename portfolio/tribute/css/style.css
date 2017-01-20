@@ -18,9 +18,16 @@ html, body {
 
 body {
 	background: #B1BFC9;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 /* NO NEED FOR RESTRICTING SELECTOR SINCE BEST PRACTICES ALLOW ONLY 1 header tag */
@@ -28,9 +35,16 @@ body {
 header {
 	width: 100%;
 	min-height: 20vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 /* RESTRICT WIDTH ON BIG SCREENS */
@@ -175,62 +189,3 @@ ul.no-bullet li a {
 ul.no-bullet li a:hover {
 	color: #1a237e;
 }
-
-
-/*
-.bg-image {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/56/HD.3A.053_(10481714045).jpg");
-
-  -ms-background-position-x: center;
-  -ms-background-position-y: bottom;
-  background-position: center bottom;
-
-  background-size: cover;
-
-  -ms-behavior: url(https://cdn.css-tricks.com/backgroundsize.min.htc);
-}
-
-.subtitle {
-  background: #48687C;
-}
-
-.accordion-title {
-  background: #48687C;
-  color: #DEF0FC;
-  font-family: "Alegreya Sans", sans-serif;
-  font-weight: 500;
-}
-
-.accordion-title:focus, .accordion-title:hover {
-  outline: none;
-  color: #48687C;
-  background: #DEF0FC;
-}
-
-.accordion-title::before,
-.accordion-title::after {
-  vertical-align: middle;
-}
-
-.desktop > .accordion-title::before,
-.is-active.desktop > .accordion-title::before {
-  content: '';
-}
-
-.callout .primary {
-  background: #93D2FC;
-}
-
-.accordion-content p {
-  word-wrap: break-word;
-  font-size: 13pt;
-}
-
-.accordion-content h1 small {
-  color: #48687C;
-}
-
-.linklist li {
-  padding: 0.25em;
-}
-*/
