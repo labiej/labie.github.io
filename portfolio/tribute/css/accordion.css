@@ -22,7 +22,7 @@ div.accordion-content::after {
 	display: table;
 }
 
-article > section > div.accordion-content.active {
+div.accordion-content.active {
 	display: block;
 }
 

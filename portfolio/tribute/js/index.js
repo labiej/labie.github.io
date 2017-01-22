@@ -56,6 +56,7 @@ var accordion = (function( $, container ) {
 
 	// Accordion functionality
 	var openContent = function() {
+		console.log( "opening content" );
 		// Use clear names
 		var $button = $( this );
 		var $content = $button.next();
@@ -74,10 +75,11 @@ var accordion = (function( $, container ) {
 		}
 
 		// Filthy hack to remove outline ( FIX WITH CSS );
-		$button.blur();
+		// $button.blur();
 	};
 
 	var closeContent = function() {
+		console.log( "Closing content" );
 		// Use clear names
 		var $button = $( this );
 		var $content = $button.next();
@@ -96,7 +98,7 @@ var accordion = (function( $, container ) {
 		}
 
 		// Remove focus after click
-		$button.blur();
+		// $button.blur();
 	};
 
 	var dbgStorage = function() {
@@ -119,3 +121,13 @@ var accordion = (function( $, container ) {
 
 var accordionHandler = accordion( jQuery );
 accordionHandler.init();
+
+// Handle smartphones and tablets
+if( document.documentElement.clientWidth <= 800 || window.innerWidth <= 800 ){
+	console.dir( accordionHandler.setSettings( {
+		'multi-expand': false,
+		'collapse-all': false
+		} )
+	);
+}
+
