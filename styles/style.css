@@ -35,7 +35,7 @@ nav .brand-logo{
 /* NAVIGATION ON MOBILE */
 .mobile-navigation{
   visibility: hidden;
-  height: 60px;
+  height: 80px;
   width: 100vw;
   vertical-align: middle;
   position: fixed;
@@ -45,6 +45,7 @@ nav .brand-logo{
   z-index: 999;
   font-size: 16px;
   padding: 0;
+	padding-top: 5px
 }
 
 .mobile-navigation ul{
@@ -61,16 +62,36 @@ nav .brand-logo{
   float: left;
   display: block;
   width: 20vw;
-  height: 60px;
-  padding: 13px 0;
+  height: 100%;
   margin: 0;
   text-align: center;
 }
 
-.mobile-navigation ul li i{
-  vertical-align: middle;
-  color: #01579b;
+.mobile-navigation ul li figure {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
+
+.mobile-navigation ul li figure img {
+	display: block;
+	height: 40px;
+	margin: 0;
+}
+
+.mobile-navigation ul li img {
+	height: 100%
+}
+
+.mobile-navigation ul li figure figcaption {
+	display: block;
+	margin: 5px 0;
+	font-weight: 600;
+	font-size: 1rem;
+}
+
 
 @media only screen and (max-width: 600px) {
   div.navbar-fixed{
