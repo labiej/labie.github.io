@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:500|Courgette');
 html{
   font-size: 12pt;
+	font-family: 'Raleway'
 }
 
 @media only screen and (min-width: 601px) {
@@ -32,6 +33,30 @@ nav .brand-logo{
   font-family: 'Courgette'
 }
 
+
+/* SVG LOGO */
+
+header{
+  width: 100%;
+  vertical-align: middle;
+}
+header > svg {
+  display:block;
+  margin: auto;
+}
+
+header > div{
+  margin: auto;
+
+}
+footer {
+	background: #cfd8dc;
+	padding-bottom: 0;
+}
+footer > .row {
+	margin-bottom: 0
+}
+
 /* NAVIGATION ON MOBILE */
 .mobile-navigation{
   visibility: hidden;
@@ -40,7 +65,7 @@ nav .brand-logo{
   vertical-align: middle;
   position: fixed;
   bottom: 0;
-  background: #cfd8dc;
+  background: #80cbc4;
   color: #01579b;
   z-index: 999;
   font-size: 16px;
@@ -88,7 +113,7 @@ nav .brand-logo{
 .mobile-navigation ul li figure figcaption {
 	display: block;
 	margin: 5px 0;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 1rem;
 }
 
@@ -110,6 +135,11 @@ nav .brand-logo{
   {
     visibility: visible;
   }
+
+	/* Make footer fully visible on mobile devices */
+	footer {
+		margin-bottom: 80px;
+	}
 }
 
 
@@ -121,21 +151,6 @@ p{
   text-align: justify;
 }
 
-/* SVG LOGO */
-
-header{
-  width: 100%;
-  vertical-align: middle;
-}
-header > svg {
-  display:block;
-  margin: auto;
-}
-
-header > div{
-  margin: auto;
-
-}
 
 /* ANIMATION */
 
