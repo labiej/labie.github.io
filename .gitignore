@@ -7,7 +7,6 @@ old/*
 
 # Only include thumbnails for the portfolio section and icons
 images/*
-!images/*.svg
 !images/*_thumbnail.png
 
 # Ignore directory listing script used on localhost
