@@ -40,15 +40,23 @@ header{
   width: 100%;
   vertical-align: middle;
 }
-header > svg {
+
+header div {
+	width: 100%;
+}
+
+header h1 {
+	width: 100%;
+	font-family: 'Courgette';
+	text-align: center;
+}
+
+header svg {
   display:block;
-  margin: auto;
+  margin: 0 auto;
 }
 
-header > div{
-  margin: auto;
 
-}
 footer {
 	background: #cfd8dc;
 	padding-bottom: 0;
