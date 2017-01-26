@@ -26,6 +26,15 @@ article.row{
   margin-bottom: 0;
 }
 
+/* Header position on top */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 /* Style panes */
 
 #front-end{
@@ -72,7 +81,10 @@ h1{
     0 20px 20px rgba(0,0,0,.15);
 }
 
-
+header h1 {
+  font-family: 'Courgette', serif;
+  text-align: center;
+}
 #front-end h1{
   font-family: 'Courgette', serif;
 }
